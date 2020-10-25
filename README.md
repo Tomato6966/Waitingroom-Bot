@@ -21,7 +21,7 @@ A basic, easy to setup Waiting Room Bot to play an audiofile on your pc / a stre
 
 ## Usage - config.json
 
-```json
+```javascript
 {
   "token": "",        // Fill in your Bot token
   "voicechannel": "", // Voice Channel Id for your Bot Channel
