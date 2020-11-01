@@ -25,8 +25,12 @@ client.login(config.token);
 //function to execute the Bot
 async function radioexecuteadmin() {
     const voiceChannel = client.guilds.cache.get(config.guildid).channels.cache.get(config.voicechannel); //define the Voice Channel
-    await voiceChannel.leave(); // leave the channel
-    await delay(300); // wait 300ms to provent a bug
+   try{
+        await voiceChannel.leave(); // leave the channel
+        await delay(300); // wait 300ms to provent a bug
+   }catch{
+   }
+   
     var connection = await voiceChannel.join();//join the channel and
     await connection.voice.setSelfDeaf(true); await connection.voice.setDeaf(true); //selfdeaf
     const dispatcher = connection.play('./audiofile.mp3'); //pick the audiofile sample is in the folder
